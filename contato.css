@@ -1,0 +1,576 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte profissional */
+    line-height: 1.6;
+}
+
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+
+/* Container da navbar */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+header .logo h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte clean e profissional */
+    font-size: 1.5em; /* Reduzindo o tamanho para um visual mais suave */
+    font-weight: 300; /* Peso de fonte leve para um visual mais clean */
+    color: #fff; /* Cor branca para manter o contraste */
+    text-transform: none; /* Removendo o uppercase para suavizar o design */
+    margin: 0; /* Sem margens extras */
+    text-align: left; /* Alinhamento à esquerda para um visual mais minimalista */
+}
+
+
+
+/* Navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px; /* Maior espaçamento entre itens */
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em; /* Ajuste no tamanho da fonte */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase; /* Maiúsculas para os links */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    padding: 8px 10px; /* Adicionando padding para links */
+    border-radius: 4px; /* Bordas arredondadas para os links */
+}
+
+header nav a:hover {
+    color: #ffffff; /* Cor vibrante (laranja) no hover */
+    transform: scale(1.1); /* Efeito de zoom sutil */
+}
+
+/* Ícone do menu para telas menores */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+/* Ícone do menu para telas menores */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute; /* Ajuste para fixar o ícone */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    z-index: 999; /* Garante que o ícone de menu fique acima do conteúdo */
+}
+
+/* Responsividade para telas menores */
+/* Ícone do menu para telas pequenas */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed; /* Fixa o ícone no topo */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    z-index: 1000; /* Maior que o conteúdo do museu */
+}
+
+/* Responsividade para telas menores */
+/* Estilo para a Navbar */
+header {
+    position: relative;
+    z-index: 10; /* Para garantir que a navbar fique acima do conteúdo */
+}
+
+/* Ícone do menu para telas pequenas */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* O ícone deve estar acima do conteúdo */
+}
+
+/* Responsividade para telas menores */
+/* Estilo geral da Navbar */
+header {
+    position: relative;
+    background-color: #333;
+    z-index: 999; /* Garantir que a navbar não fique atrás de outros conteúdos */
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade - Menu em telas pequenas */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Esconde o menu inicialmente */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    header nav.active ul {
+        display: flex; /* Mostra o menu quando 'active' for adicionado */
+    }
+
+    header nav a {
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    #menu-icon {
+        display: block; /* Exibe o ícone de menu */
+    }
+
+    /* Espaçamento para que o conteúdo não fique escondido por cima da navbar */
+    .museu-conteudo {
+        padding-top: 100px; /* Adiciona margem para o conteúdo */
+    }
+}
+
+/* Página Home específica */
+.home .museu-conteudo {
+    padding-top: 120px; /* Para garantir mais espaço na página inicial */
+}
+
+
+
+/* Seção de Introdução */
+.intro {
+    position: relative;
+    height: 100vh;  /* Ocupa toda a altura da tela */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Garante que o vídeo ocupe toda a altura da tela */
+    z-index: -1;
+}
+
+.intro .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.intro-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-content h2 {
+        font-size: 2.5em;
+    }
+
+    .intro-content p {
+        font-size: 1.2em;
+    }
+}
+
+
+
+/* Formulário de Contato */
+.contato-secao {
+    background-color: #f2f2f2; /* Fundo laranja */
+    padding: 60px 0;
+    border-radius: 0; /* Removendo as bordas arredondadas */
+    width: 100%; /* Garante que ocupe toda a largura */
+    margin: 0; /* Remove qualquer margem */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    
+}
+
+.contato-secao h2 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+/* Estilo para o conteúdo do formulário e texto */
+.contato-content {
+    display: flex;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    gap: 30px; /* Reduzido para 30px, você pode ajustar se necessário */
+    padding: 0 20px;
+}
+
+/* Estilo para o formulário */
+form {
+    width: 100%;
+    max-width: 600px; /* Maior largura para o formulário */
+    background-color: #ddd6d6; /* Fundo suave */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .contato-content {
+        flex-direction: column; /* Empilha os itens em dispositivos menores */
+        gap: 20px; /* Mais espaço entre os elementos ao empilhar */
+    }
+
+    form {
+        max-width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    }
+}
+
+/* Estilo para os labels do formulário */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilo para os campos de entrada (input e textarea) */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Foco nos campos de entrada */
+form input:focus, form textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Estilo para o botão de envio */
+.submit-button {
+    background-color: #333;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo do botão de envio ao passar o mouse */
+.submit-button:hover {
+    background-color: #565656;
+}
+
+
+/* Mapa */
+.mapa-contato {
+    background-color: #f2f2f2; /* Fundo cinza claro */
+    margin: 0; /* Remove qualquer margem extra */
+    padding: 0; /* Remove o padding */
+    width: 100%;
+    height: auto; /* A altura será ajustada automaticamente */
+    border-radius: 0;
+    padding-top: 0;  /* Garante que o padding não crie um espaço extra */
+}
+
+/* Título da seção mapa */
+.mapa-contato h3 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #2C3E50;
+    margin-top: 0; /* Remove o espaço do topo do título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    padding-top: 60px; /* Ajusta o espaço entre o vídeo e o título */
+}
+
+/* Ajustes no iframe do mapa */
+.mapa-contato iframe {
+    width: 100%;
+    height: 400px;  /* Ajuste da altura do mapa */
+    border: none;
+    border-radius: 0;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .mapa-contato iframe {
+        height: 300px;  /* Ajusta a altura do mapa em telas menores */
+    }
+}
+
+
+
+/* Estilo básico para a seção de FAQ */
+.faq {/* Fundo cinza claro */
+
+    padding: 60px 20px;
+    border-radius: 0; /* Remove bordas arredondadas */
+    width: 100%; /* Garante que ocupe toda a largura */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+}
+
+.faq h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+/* Estilo de cada item FAQ */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+/* Botões das perguntas */
+.faq-question {
+    background-color: #cccccc52;
+    color: #333;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de hover no botão */
+.faq-question:hover {
+    background-color: #cccccc52;
+    transform: translateY(-2px); /* Levanta um pouco o botão ao passar o mouse */
+}
+
+/* Respostas */
+.faq-answer {
+    display: none; /* Resposta inicialmente oculta */
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-left: 5px solid #ffffff9c;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 768px) {
+    .faq {
+        padding: 20px;
+    }
+
+    .faq h2 {
+        font-size: 2em;
+    }
+
+    .faq-question {
+        font-size: 1.1em;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #222; /* Cor mais escura para um visual mais sério */
+    color: #ccc; /* Cor de texto suave para garantir legibilidade */
+    padding: 40px 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Fonte mais sóbria */
+    font-size: 0.9em; /* Fonte mais discreta */
+}
+
+.footer-secoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-secoes > div {
+    flex: 1;
+    min-width: 220px;
+}
+
+footer h3 {
+    font-size: 1.4em; /* Menor tamanho para o título */
+    margin-bottom: 10px; /* Menos margem */
+    font-weight: 600; /* Peso de fonte mais leve */
+    color: #fff; /* Título em branco */
+    text-transform: uppercase; /* Títulos em maiúsculas para destacá-los */
+    letter-spacing: 1px; /* Espaçamento entre letras para um visual mais moderno */
+}
+
+footer a {
+    text-decoration: none;
+    color: #ccc; /* Link de cor mais suave */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff; /* Cor do link ao passar o mouse */
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-media a {
+    font-size: 1.6em; /* Ícones sociais em tamanho moderado */
+}
+
+.social-icon i {
+    color: #ccc;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover i {
+    color: #fff; /* Cor de destaque nos ícones sociais */
+}
+
+.contato p, .copyright p {
+    margin-bottom: 8px; /* Menos margem para maior coesão */
+    font-size: 0.9em; /* Fonte de texto menor */
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8em; /* Tamanho da fonte reduzido para mais discrição */
+    margin-top: 20px;
+    color: #888; /* Cor mais suave para o texto de copyright */
+}
+
+@media (max-width: 768px) {
+    .footer-secoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-secoes > div {
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .copyright {
+        margin-top: 30px;
+    }
+}

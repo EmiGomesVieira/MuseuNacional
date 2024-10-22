@@ -1,0 +1,783 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte profissional */
+    line-height: 1.6;
+}
+
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+
+/* Container da navbar */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+header .logo h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte clean e profissional */
+    font-size: 1.5em; /* Reduzindo o tamanho para um visual mais suave */
+    font-weight: 300; /* Peso de fonte leve para um visual mais clean */
+    color: #fff; /* Cor branca para manter o contraste */
+    text-transform: none; /* Removendo o uppercase para suavizar o design */
+    margin: 0; /* Sem margens extras */
+    text-align: left; /* Alinhamento à esquerda para um visual mais minimalista */
+}
+
+
+
+/* Navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px; /* Maior espaçamento entre itens */
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em; /* Ajuste no tamanho da fonte */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase; /* Maiúsculas para os links */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    padding: 8px 10px; /* Adicionando padding para links */
+    border-radius: 4px; /* Bordas arredondadas para os links */
+}
+
+header nav a:hover {
+    color: #ffffff; /* Cor vibrante (laranja) no hover */
+    transform: scale(1.1); /* Efeito de zoom sutil */
+}
+
+/* Ícone do menu para telas menores */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+/* Ícone do menu para telas menores */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute; /* Ajuste para fixar o ícone */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    z-index: 999; /* Garante que o ícone de menu fique acima do conteúdo */
+}
+
+/* Responsividade para telas menores */
+/* Ícone do menu para telas pequenas */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed; /* Fixa o ícone no topo */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    z-index: 1000; /* Maior que o conteúdo do museu */
+}
+
+/* Responsividade para telas menores */
+/* Estilo para a Navbar */
+header {
+    position: relative;
+    z-index: 10; /* Para garantir que a navbar fique acima do conteúdo */
+}
+
+/* Ícone do menu para telas pequenas */
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* O ícone deve estar acima do conteúdo */
+}
+
+/* Responsividade para telas menores */
+/* Estilo geral da Navbar */
+header {
+    position: relative;
+    background-color: #333;
+    z-index: 999; /* Garantir que a navbar não fique atrás de outros conteúdos */
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade - Menu em telas pequenas */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Esconde o menu inicialmente */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    header nav.active ul {
+        display: flex; /* Mostra o menu quando 'active' for adicionado */
+    }
+
+    header nav a {
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    #menu-icon {
+        display: block; /* Exibe o ícone de menu */
+    }
+
+    /* Espaçamento para que o conteúdo não fique escondido por cima da navbar */
+    .museu-conteudo {
+        padding-top: 100px; /* Adiciona margem para o conteúdo */
+    }
+}
+
+/* Página Home específica */
+.home .museu-conteudo {
+    padding-top: 120px; /* Para garantir mais espaço na página inicial */
+}
+
+
+
+/* Seção de Introdução */
+.intro {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.intro .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.intro-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+}
+
+/* Seção de Imagem de Fundo */
+.imagem-fundo {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Garante que a imagem ocupe toda a altura da tela */
+    background-image: url('img/img1.png'); /* Defina o caminho da sua imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: white; /* Cor do texto sobre a imagem */
+    text-align: center; /* Centraliza o texto */
+}
+
+.imagem-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+}
+
+.imagem-fundo h2 {
+    font-size: 3em;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.imagem-fundo p {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+/* Estilo do Link (Botão) */
+.btn-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease ;
+}
+
+.btn-link:hover {
+    color: #555;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .imagem-fundo h2 {
+        font-size: 2.5em;
+    }
+
+    .imagem-fundo p {
+        font-size: 1.2em;
+    }
+
+    .btn-link {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagem-fundo h2 {
+        font-size: 2em;
+    }
+
+    .imagem-fundo p {
+        font-size: 1em;
+    }
+
+    .btn-link {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Estilo para a Seção de Texto com Fundo Diferente */
+.texto-fundo {
+    background-color: #f4f4f4; /* Cor de fundo diferente */
+    padding: 40px 20px;
+}
+
+.texto-container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza a seção */
+    text-align: center; /* Centraliza o texto */
+}
+
+.texto-fundo h2 {
+    font-size: 2em;
+    color: #333; /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.texto-fundo p {
+    font-size: 1.2em;
+    color: #555; /* Cor do parágrafo */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .texto-container {
+        padding: 0 20px; /* Ajusta o padding em telas pequenas */
+    }
+
+    .texto-fundo h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    .texto-fundo p {
+        font-size: 1em; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+}
+
+
+/* Estilos do Agendamento */
+.agendamento {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Garante que a altura ocupe toda a altura da tela */
+    overflow: hidden; /* Para garantir que a imagem não ultrapasse a área */
+}
+
+.agendamento-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centraliza verticalmente */
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique sobre a imagem */
+    width: 100%;
+    height: 100%;
+}
+
+.agendamento-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/img2.png'); /* Defina o caminho da sua imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    z-index: -1; /* Coloca a imagem atrás dos outros elementos */
+}
+
+.agendamento-formulario {
+    position: relative;
+    z-index: 1; /* Garante que o formulário fique acima da imagem */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%; /* Faz com que o formulário ocupe toda a largura disponível */
+    text-align: center;
+}
+
+/* Estilizando os inputs */
+input[type="date"],
+input[type="time"],
+button {
+    width: 100%; /* Faz com que os inputs e o botão ocupem toda a largura */
+    margin: 10px 0; /* Espaçamento entre os elementos */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .agendamento-formulario {
+        padding: 20px;
+    }
+
+    /* Ajustes no fundo para telas menores */
+    .agendamento-imagem {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 480px) {
+    .agendamento-formulario {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .agendamento-imagem {
+        background-size: cover;
+        background-position: top center;
+    }
+}
+
+
+
+
+
+.agendamento h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.agendamento form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.agendamento form label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.agendamento form input,
+.agendamento form button {
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.agendamento form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.agendamento form button:hover {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .agendamento-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agendamento-imagem {
+        height: 50%; /* A imagem vai ocupar 50% da altura em telas pequenas */
+    }
+
+    .agendamento-formulario {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrossel-container {
+        flex-direction: column;
+    }
+
+    .mapa-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agendamento-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa-info, .mapa-embed {
+        flex: 1 100%;
+    }
+
+    .agendamento-imagem img {
+        max-width: 100%;
+    }
+}
+
+/* Layout da seção Exposições e Acervo */
+.exposicoes-acervo {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif; /* Fonte Arial */
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos principais de Exposições e Acervo */
+.exposicoes-acervo h2 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: normal; /* Removendo peso excessivo */
+}
+
+/* Estilo para cada seção */
+.section {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhando os conteúdos à esquerda */
+    padding-bottom: 40px; /* Espaçamento abaixo de cada seção */
+    border-bottom: 1px solid rgba(44, 62, 80, 0.3); /* Linha separadora fina e mais clara */
+}
+
+/* Removendo a borda superior da primeira seção */
+.section:first-child {
+    border-top: none;
+}
+
+/* Removendo a borda inferior da última seção */
+.section:last-child {
+    border-bottom: none;
+}
+
+/* Alinhando o título com o texto */
+.section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 0px; /* Removendo espaçamento entre o título e o conteúdo */
+    font-weight: normal;
+    text-align: left; /* Alinhando o título à esquerda */
+    width: 100%; /* Garantir que o título ocupe toda a largura */
+    margin-top: 30px;
+}
+
+/* Estilo do conteúdo (imagem e texto ao lado) */
+.content {
+    display: flex;
+    gap: 80px; /* Espaço pequeno entre a imagem e o texto */
+    align-items: flex-start; /* Alinha o texto ao topo da imagem */
+    justify-content: flex-start; /* Ajustando o alinhamento para a esquerda */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Estilo da imagem */
+.image {
+    width: 100%;
+    max-width: 500px; /* Diminuindo o limite máximo da imagem para reduzir o espaço direito */
+    height: 600px; /* Definição da altura fixa */
+    overflow: hidden;
+    margin-bottom: 30px; /* Removido o espaçamento entre imagem e texto */
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Linha separadora abaixo de cada imagem e texto */
+.section-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(44, 62, 80, 0.3); /* Linha mais clara e fina */
+    margin-top: 20px; /* Reduzido para aproximar a linha do conteúdo */
+    margin-bottom: 20px; /* Espaço ajustado */
+}
+
+/* Imagem dentro do contêiner */
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem tenha o mesmo tamanho sem distorcer */
+}
+
+/* Estilo do texto */
+.text {
+    max-width: 600px;
+    font-size: 1.2em;
+    color: #333;
+    padding-top: 0px; /* Removido o espaçamento entre a imagem e o texto */
+    text-align: left; /* Alinhando o texto à esquerda */
+    line-height: 1.6; /* Melhorando a legibilidade */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Mantém o espaço reduzido em telas menores */
+    }
+
+    .image {
+        max-width: 90%;
+    }
+
+    .text {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .exposicoes-acervo h2 {
+        font-size: 2.5em;
+    }
+
+    .section h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .exposicoes-acervo h2 {
+        font-size: 2em;
+    }
+
+    .section h3 {
+        font-size: 1.8em;
+    }
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #222; /* Cor mais escura para um visual mais sério */
+    color: #ccc; /* Cor de texto suave para garantir legibilidade */
+    padding: 40px 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Fonte mais sóbria */
+    font-size: 0.9em; /* Fonte mais discreta */
+}
+
+.footer-secoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-secoes > div {
+    flex: 1;
+    min-width: 220px;
+}
+
+footer h3 {
+    font-size: 1.4em; /* Menor tamanho para o título */
+    margin-bottom: 10px; /* Menos margem */
+    font-weight: 600; /* Peso de fonte mais leve */
+    color: #fff; /* Título em branco */
+    text-transform: uppercase; /* Títulos em maiúsculas para destacá-los */
+    letter-spacing: 1px; /* Espaçamento entre letras para um visual mais moderno */
+}
+
+footer a {
+    text-decoration: none;
+    color: #ccc; /* Link de cor mais suave */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff; /* Cor do link ao passar o mouse */
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-media a {
+    font-size: 1.6em; /* Ícones sociais em tamanho moderado */
+}
+
+.social-icon i {
+    color: #ccc;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover i {
+    color: #fff; /* Cor de destaque nos ícones sociais */
+}
+
+.contato p, .copyright p {
+    margin-bottom: 8px; /* Menos margem para maior coesão */
+    font-size: 0.9em; /* Fonte de texto menor */
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8em; /* Tamanho da fonte reduzido para mais discrição */
+    margin-top: 20px;
+    color: #888; /* Cor mais suave para o texto de copyright */
+}
+
+@media (max-width: 768px) {
+    .footer-secoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-secoes > div {
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+    .copyright {
+        margin-top: 30px;
+    }
+}
